@@ -3,11 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Tasks</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <style type="text/css">
+ h1 {
+	color: green;
+}
+body{
+background: lime;
+}
+ </style>
 </head>
 <body>
-<h1>Your tasks list:</h1>
-
-<table>
+<div class="col-md-2">
+<nav id="sidebar" class="navbar navbar-dark">
+        <div class="list-group">
+<a class="list-group-item"  href="/tasks">Find all tasks</a>
+<a class="list-group-item" href="/form">Add new task</a>
+</div>
+</nav>
+</div>
+<h1 class="text-center">Your tasks list:</h1>
+<div class="container">
+<table class="table table-bordered table-hover">
 <tr>
 <th>ID</th>
 <th>Creation date</th>
@@ -23,7 +40,5 @@
 </tr>
 {{/tasks}}
 </table>
-<a href="/tasks">Find all tasks</a>
-<a href="/form">Add new task</a>
 </body>
 </html>

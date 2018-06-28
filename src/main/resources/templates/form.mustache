@@ -3,15 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <title>My LIST</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <style type="text/css">
+ h1 {
+	color: green;
+}
+body{
+background: lime;
+}
+</style>
 </head>
 <body>
-<h1>Add a new task</h1>
+
+<div class="col-md-2">
+<nav id="sidebar" class="navbar navbar-dark">
+        <div class="list-group">
+<a class="list-group-item"  href="/tasks">Find all tasks</a>
+<a class="list-group-item" href="/form">Add new task</a>
+</div>
+</nav>
+</div>
+<div class="container col-md-4">
+<h1 class="text-center">Add a new task</h1>
+<div class="container">
 <form method="post">
-<input name="deadLine" type="datetime-local" required min="2018-06-27T00:00" required placeholder="Input the end date of task">
-<input name="description" type="text" required placeholder="Input the text">
-<input type="submit" value="Add task">
+ <div class="card shadow">
+        <div class="card-block">
+        <label for="deadLine">Input the end date of task:</label>
+<input id="deadLine" name="deadLine" type="datetime-local" required min="2018-06-27T00:00" required>
+<label for="desc">Description</label>
+<input id="desc" name="description" type="text" required placeholder="Input the text">
+<input class="btn btn-success" type="submit" value="Add task">
+</div>
+</div>
 </form>
-<a href="/tasks">Find all tasks</a>
-<a href="/form">Add new task</a>
 </body>
 </html>
